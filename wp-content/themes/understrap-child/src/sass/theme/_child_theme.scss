@@ -1,0 +1,53 @@
+.card {
+  height: 100%;
+
+  &-image {
+    height: 150px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &-badge {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+  }
+
+  .info-text {
+    font-size: .8rem;
+  }
+}
+
+.carousel-item {
+  height: 200px;
+  @include media-breakpoint-up(sm) {
+    height: 300px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.new-object {
+  .form-success-msg {
+    display: none;
+  }
+
+  &.success {
+    .row {
+      display: none;
+    }
+    .form-success-msg {
+      display: block;
+    }
+  }
+}

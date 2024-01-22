@@ -14964,6 +14964,56 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
 }
 
+.card {
+  height: 100%;
+}
+.card-image {
+  height: 150px;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.card-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.card .info-text {
+  font-size: 0.8rem;
+}
+
+.carousel-item {
+  height: 200px;
+}
+@media (min-width: 576px) {
+  .carousel-item {
+    height: 300px;
+  }
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.new-object .form-success-msg {
+  display: none;
+}
+.new-object.success .row {
+  display: none;
+}
+.new-object.success .form-success-msg {
+  display: block;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

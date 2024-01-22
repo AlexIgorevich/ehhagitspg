@@ -8,6 +8,15 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+//Init files
+
+require_once get_theme_file_path( 'inc/cpt.php');
+require_once get_theme_file_path( 'inc/cptRelations.php');
+require_once get_theme_file_path( 'inc/City_Widget.php');
+require_once get_theme_file_path( 'inc/formShortcode.php');
+require_once get_theme_file_path( 'inc/custom.php');
+
+
 
 
 /**

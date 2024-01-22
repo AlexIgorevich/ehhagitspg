@@ -1,6 +1,6 @@
 /*!
   * Understrap v1.2.0 (https://understrap.com)
-  * Copyright 2013-2022 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+  * Copyright 2013-2024 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
   * Licensed under GPL-3.0 (undefined)
   */
 (function (global, factory) {
@@ -6742,6 +6742,35 @@
 	    }, false);
 	  }
 	})();
+
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function () {
+
+	  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+	  var forms = document.querySelectorAll('.needs-validation');
+
+	  // Loop over them and prevent submission
+	  Array.prototype.slice.call(forms).forEach(function (form) {
+	    form.addEventListener('submit', function (event) {
+	      form.querySelector('[type=submit]').disabled = true;
+	      event.preventDefault();
+	      if (!form.checkValidity()) {
+	        event.stopPropagation();
+	        form.querySelector('[type=submit]').disabled = false;
+	      }
+	      form.classList.add('was-validated');
+	      let formdata = new FormData(form);
+	      fetch(ajaxData.url, {
+	        method: "POST",
+	        credentials: 'same-origin',
+	        body: formdata
+	      }).then(response => response.json()).then(data => {
+	        form.querySelector('[type=submit]').disabled = false;
+	        form.classList.add('success');
+	      });
+	    }, false);
+	  });
+	})(); // Add your custom JS here.
 
 	exports.Alert = alert;
 	exports.Button = button;
